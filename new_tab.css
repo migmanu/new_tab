@@ -27,12 +27,12 @@ html, body {
     display: flex;    
     justify-content: center;
     align-content: center;
+    box-sizing: border-box;
 }
 
 .btn {
     border-radius: 50%;
     border-style: hidden;
-    background-color: blueviolet;
 }
 
 .btn-image {
