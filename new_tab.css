@@ -1,0 +1,61 @@
+
+html, body {
+    margin: 0%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.icon-container {
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    justify-content: center;
+    align-content: center;
+}
+
+.btn {
+    border-radius: 50%;
+    border-style: hidden;
+    background-color: blueviolet;
+}
+
+.btn-image {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-legend {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/*
+* Visually hidden content for screen readers
+*/
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(100%); 
+    height: 1px; 
+    overflow: hidden; 
+    position: absolute; 
+    white-space: nowrap; 
+    width: 1px;
+}
