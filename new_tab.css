@@ -48,6 +48,7 @@ html, body {
 .btn {
     border-radius: 50%;
     border-style: hidden;
+    cursor: pointer;
 }
 
 .btn-image {
