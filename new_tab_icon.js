@@ -9,8 +9,8 @@ function modLink() {
     <div class="edit_form">
         <form>
             <h2>Edit Icon</h2>
-            <input type="text" name="Website Title" maxlength="14" required>
-            <input type="url" name="Website URL" required>
+            <input type="text" name="Website Title" maxlength="14" placeholder="Website Title" required>
+            <input type="url" name="Website URL" placeholder="URL" required>
             <input type="file" id="image_upload" name="Icon" accept="image/png, image/jpeg">
             <label for="image_upload">Upload icon image (PNG, JPG)</label>
             <input type="submit" name="Submit form">
