@@ -6,12 +6,13 @@ let el = document.querySelector(".btn");
 function modLink() {
     event.preventDefault();
     let inputBox = `
-    <div class="edit-form">
+    <div class="edit_form">
         <form>
             <h2>Edit Icon</h2>
             <input type="text" name="Website Title" maxlength="14" required>
             <input type="url" name="Website URL" required>
-            <input type="file" name="Icon" accept="image/png, image/jpeg">
+            <input type="file" id="image_upload" name="Icon" accept="image/png, image/jpeg">
+            <label for="image_upload">Upload icon image (PNG, JPG)</label>
             <input type="submit" name="Submit form">
         </form>
     </div>
