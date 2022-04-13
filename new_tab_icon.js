@@ -1,4 +1,4 @@
-/* listens for secondary click on icons and siplays menu to edit links and images */
+/* listens for secondary click on icons and displays menu to edit links and images */
 
 let els = document.getElementsByClassName("btnForm")
 let el = document.querySelector(".btn");
