@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="new_tab.css">
     </head>
     <body background="generic_background.jpg">
-        <div class="container">
+        <div class="container" id="container">
             <div class="first-icon-row">
                 <div class="icon-container">
                     <form class="btnForm" action="https://mail.google.com/mail/u/0/#inbox">
@@ -83,8 +83,12 @@
                     </form>
                 </div>
             </div>
+            <script>
+                function editIcon(form) {
+                    console.log("heeey");
+                }
+            </script>
         </div>
-
-        <script src="new_tab_icon.js"></script>
+        <script src="icon.js"></script>
     </body>
 </html>
