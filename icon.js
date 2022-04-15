@@ -4,14 +4,17 @@ const formList = document.getElementsByClassName("btnForm");
 formList[0].addEventListener("contextmenu", function (event) {
     event.preventDefault();
 
-    displayMenu("1");
+    displayMenu(this.id);
 });
 
 
-function displayMenu (formID) {
-    
+function displayMenu (ID) {
+
+    // create unique ID to link form to specific icon
+    const formID = "icon" + ID
+
     let inputBox = `
-    <div class="edit_form">
+    <div class="edit_form" id=${ID}>
         <form onSubmit="editIcon()">
             <h2>Edit Icon</h2>
             <input type="text" name="Website Title" maxlength="14" placeholder="Website Title" required>
