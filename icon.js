@@ -1,6 +1,9 @@
 /* 
 Component made to control icons behavior. Searches all elements with "btnForm" class,
 adds event listeners for right click and displays edit menu when event fires.
+
+When the form is submitted the editIcon() located in new_tab.html function is executed,
+saving changes to icon.
 */
 
 const formList = document.getElementsByClassName("btnForm");
