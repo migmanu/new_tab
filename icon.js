@@ -16,6 +16,9 @@ Array.from(formList).forEach(element => {
 
 
 function displayMenu (ID) {
-    const form = document.getElementById("edit_form");
-    form.style.display = 'block';
+    const formDiv = document.getElementById("edit_form");
+    const form = document.getElementById("icon_edit_form");
+
+    formDiv.style.display = 'block';
+    form.id = ID;
 }

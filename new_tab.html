@@ -8,10 +8,10 @@
     <body background="generic_background.jpg">
         <div class="container" id="container">
             <div id="edit_form">
-                <form onsubmit="editIcon(event)">
+                <form id="icon_edit_form" onsubmit="editIcon(event, id)">
                     <h2>Edit Icon</h2>
                     <input type="text" name="Website Title" maxlength="14" placeholder="Website Title">
-                    <input type="url" name="Website URL" placeholder="URL">
+                    <input id="url_input" type="url" name="Website URL" placeholder="URL">
                     <input type="file" id="image_upload" name="Icon" accept="image/png, image/jpeg">
                     <label for="image_upload">Upload icon image (PNG, JPG)</label>
                     <input type="submit" name="Submit form">
@@ -34,6 +34,7 @@
                 // function to execute after icon editing form is submitted
                 function editIcon(event, id) {
                     event.preventDefault();
+                    console.log(id);
                     const el = document.getElementById("edit_form");
                     el.style.display = 'none';
                 }
