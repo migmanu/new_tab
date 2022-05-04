@@ -1,3 +1,7 @@
+/* 
+Component made to control icons behavior. Searches all elements with "btnForm" class,
+adds event listeners for right click and displays edit menu when event fires.
+*/
 
 const formList = document.getElementsByClassName("btnForm");
 
