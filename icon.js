@@ -1,17 +1,16 @@
 
 const formList = document.getElementsByClassName("btnForm");
 
-formList[0].addEventListener("contextmenu", function (event) {
-    event.preventDefault();
+Array.from(formList).forEach(element => {
+    element.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
 
-    displayMenu(this.id);
+        displayMenu(this.id);
+    })
 });
 
 
 function displayMenu (ID) {
-
-    // create unique ID to link form to specific icon
-    const formID = "icon" + ID
 
     let inputBox = `
     <div class="edit_form" id=${ID}>
