@@ -7,6 +7,16 @@
     </head>
     <body background="generic_background.jpg">
         <div class="container" id="container">
+            <div id="edit_form">
+                <form onsubmit="editIcon(event)">
+                    <h2>Edit Icon</h2>
+                    <input type="text" name="Website Title" maxlength="14" placeholder="Website Title">
+                    <input type="url" name="Website URL" placeholder="URL">
+                    <input type="file" id="image_upload" name="Icon" accept="image/png, image/jpeg">
+                    <label for="image_upload">Upload icon image (PNG, JPG)</label>
+                    <input type="submit" name="Submit form">
+                </form>
+            </div>
             <div class="first-icon-row">
                 <div class="icon-container">
                     <form class="btnForm" id="icon1" action="https://mail.google.com/mail/u/0/#inbox">
@@ -22,8 +32,10 @@
             </div>
             <script>
                 // function to execute after icon editing form is submitted
-                function editIcon(form) {
-                    console.log("heeey");
+                function editIcon(event, id) {
+                    event.preventDefault();
+                    const el = document.getElementById("edit_form");
+                    el.style.display = 'none';
                 }
             </script>
         </div>

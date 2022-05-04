@@ -1,9 +1,7 @@
 /* 
 Component made to control icons behavior. Searches all elements with "btnForm" class,
-adds event listeners for right click and displays edit menu when event fires.
-
-When the form is submitted the editIcon() located in new_tab.html function is executed,
-saving changes to icon.
+adds event listeners for right click and changes the icon edit form display property
+ edit menu when event fires.
 */
 
 const formList = document.getElementsByClassName("btnForm");
@@ -18,20 +16,6 @@ Array.from(formList).forEach(element => {
 
 
 function displayMenu (ID) {
-
-    let inputBox = `
-    <div class="edit_form" id=${ID}>
-        <form onSubmit="editIcon()">
-            <h2>Edit Icon</h2>
-            <input type="text" name="Website Title" maxlength="14" placeholder="Website Title" required>
-            <input type="url" name="Website URL" placeholder="URL" required>
-            <input type="file" id="image_upload" name="Icon" accept="image/png, image/jpeg">
-            <label for="image_upload">Upload icon image (PNG, JPG)</label>
-            <input type="submit" name="Submit form">
-        </form>
-    </div>
-   ` 
-   // insert icon editing menu as first child of icons container 
-   document.getElementById("container").insertAdjacentHTML("afterbegin", inputBox)
-
+    const form = document.getElementById("edit_form");
+    form.style.display = 'block';
 }

@@ -64,7 +64,8 @@ html, body {
 }
 
 
-.edit_form {
+#edit_form {
+    display: none;
     position: absolute;
     top: -200px;
     background-color: rgb(255, 255, 255);
