@@ -20,5 +20,5 @@ function displayMenu (ID) {
     const form = document.getElementById("icon_edit_form");
 
     formDiv.style.display = 'block';
-    form.id = ID;
+    form.className = ID;
 }
