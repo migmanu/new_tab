@@ -9,7 +9,7 @@
     },
     "permissions": ["storage", "unlimitedStorage"],
     "background": {
-        "scripts": [".JS/icon.js"],
+        "scripts": ["/JS/icon.js"],
         "persistent": false
     },
     "minimum_chrome_version": "60"
