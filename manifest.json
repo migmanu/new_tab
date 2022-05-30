@@ -10,7 +10,6 @@
     "permissions": ["storage", "unlimitedStorage"],
     "background": {
         "scripts": ["/JS/background.js"],
-        "persistent": false
     },
     "minimum_chrome_version": "60"
 }
