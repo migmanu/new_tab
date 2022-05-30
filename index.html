@@ -8,7 +8,7 @@
     <body background="./Icons/generic_background.jpg">
         <div class="container" id="container">
             <div id="edit_form">
-                <form id="icon_edit_form" class="" onsubmit="editIcon(event, class)">
+                <form id="icon_edit_form" class="" onsubmit="editIcon(event, class{})">
                     <h2>Edit Icon</h2>
                     <input type="text" name="Website Title" maxlength="14" placeholder="Website Title">
                     <input id="url_input" type="url" name="Website URL" placeholder="URL">
@@ -21,7 +21,7 @@
                 <div class="icon-container">
                     <form class="btnForm" id="icon1" action="https://mail.google.com/mail/u/0/#inbox">
                         <button class="btn" id="btn-1" type="submit">
-                            <img class="btn-image" src="gmail.ico" alt="gmail icon">
+                            <img class="btn-image" src="./Icons/gmail.ico" alt="gmail icon">
                             <span class="sr-only">Link to favorite site</span>
                         </button>
                         <p class="btn-legend">gmail</p>
@@ -35,7 +35,7 @@
                 function editIcon(event, identifier) {
                     event.preventDefault();
 
-                    console.log(id);
+                    console.log("identifier is: ", identifier);
 
                     // edit pressed button
                     const pressedButton = document.getElementById(identifier);
