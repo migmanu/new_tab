@@ -30,27 +30,6 @@
             </div>
             <div class="second-icon-row">
             </div>
-            <script>
-                // function to execute after icon editing form is submitted
-                function editIcon(event, identifier) {
-                    event.preventDefault();
-
-                    console.log("identifier is: ", identifier);
-
-                    // edit pressed button
-                    const pressedButton = document.getElementById(identifier);
-                    const newURL = document.getElementById("url_input").value;
-                    console.log("value is", newURL);
-
-                    pressedButton.action = newURL;
-
-                    // hide form after submit and return ID to default
-                    const formDiv = document.getElementById("edit_form");
-                    formDiv.style.display = 'none';
-
-                    
-                }
-            </script>
         </div>
         <script src="./JS/background.js"></script>
     </body>
