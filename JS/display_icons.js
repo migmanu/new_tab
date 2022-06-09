@@ -1,1 +1,0 @@
-// displays the eight icons dynamically, each with a unique ID
