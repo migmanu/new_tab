@@ -5,11 +5,11 @@
     "description": "simple new tab extension for Chrome. Not intended for public use yet",
     
     "chrome_url_overrides": {
-        "newtab:": "/index.html"
+        "newtab": "index.html"
     },
     "permissions": ["storage", "unlimitedStorage"],
     "background": {
-        "scripts": ["/JS/background.js"]
+        "scripts": ["JS/background.js"]
     },
     "minimum_chrome_version": "60"
 }
