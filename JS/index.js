@@ -12,6 +12,8 @@ let iconsData = {
     }
 }
 
+
+
 chrome.storage.local.set({iconsData}, function() {
     console.log('value set is artigas')
 })
