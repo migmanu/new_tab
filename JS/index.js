@@ -3,32 +3,27 @@ Component made to control icons behavior. Searches all elements with "btnForm" c
 adds event listeners for right click and changes the icon edit form display property
  edit menu when event fires.
 */
-
-let iconsData = {
-    icon1: {
-        website_title: "placeholder",
-        website_URL: "",
-        website_icon: ""
-    }
-}
-
-
-chrome.storage.local.set({iconsData}, function() {
-    console.log('value set is artigas')
-})
+chrome.storage.local.set({icon1: {website_title: "third example"}})
 
 chrome.storage.local.get(['icon1'], function(result) {
-    console.log(`value retrieved is ${result}`)
+    console.log(`value retrieved is ${result.icon1.website_title}`)
 })
-
+                        
 let iconToEdit = ''
 
 const iconFormsList = document.getElementsByClassName("btnForm");
 
-
+// construct each icon retrieving its data from Chrome local storage
 Array.from(iconFormsList).forEach(element => {
     const elementID = element.id
     console.log(`element id: ${elementID}`);
+
+    let elementTitle
+    chrome.storage.local.get([`${elementID}`], function (result) {
+        console.log("chrome API init")
+        elementTitle = result[`${elementID}`].website_title
+        console.log(`element title is: ${elementTitle}`)
+    })
 })
 
 
@@ -47,14 +42,14 @@ function displayMenu (ID) {
     console.log(`displayMenu ID: ${ID}`)
 
     formDiv.style.display = 'block';
-    iconToEdit = ID
+    iconToEdit = ID;
 
-    console.log(`form.className set to: ${iconToEdit} type ${typeof(iconToEdit)}`)
-}
+    console.log(`form.className set to: ${iconToEdit} type ${typeof(iconToEdit)}`);
+};
 
 
-const iconEditMenu = document.getElementById("icon_edit_form")
-console.log(`iconEditMenu: ${iconEditMenu}`)
+const iconEditMenu = document.getElementById("icon_edit_form");
+console.log(`iconEditMenu: ${iconEditMenu}`);
 
 iconEditMenu.addEventListener("submit", function (event) {
     event.preventDefault();
