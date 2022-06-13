@@ -10,6 +10,7 @@ let iconToEdit = ''
 
 const iconFormsList = document.getElementsByClassName("btnForm");
 
+
 // construct each icon retrieving its data from Chrome local storage
 Array.from(iconFormsList).forEach(element => {
     const elementID = element.id
@@ -20,11 +21,9 @@ Array.from(iconFormsList).forEach(element => {
     chrome.storage.local.get([`${elementID}`], function (result) {
         console.log("chrome API init")
         elementTitle = result[`${elementID}`].website_title
-        console.log(`element title is: ${elementTitle}`)
+        console.log(`element title is: ${elementTitle} type: ${typeof(elementTitle)}`)
+        document.getElementById(`${elementID}-btn-legend`).innerText = elementTitle
     })
-    let iconTitle = iconToBuild.getElementsByClassName("btn-legend")
-    iconTitle.textContent = elementTitle
-    console.log(`icon title is ${iconTitle}`)
 })
 
 
