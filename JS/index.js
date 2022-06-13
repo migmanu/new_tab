@@ -4,6 +4,7 @@ adds event listeners for right click and changes the icon edit form display prop
  edit menu when event fires.
 */
 chrome.storage.local.set({icon1: {website_title: "third example"}})
+chrome.storage.local.set({icon2: {website_title: "wonderfull!"}})
 
                         
 let iconToEdit = ''
@@ -61,4 +62,3 @@ iconEditMenu.addEventListener("submit", function (event) {
     const formDiv = document.getElementById("edit_form");
     formDiv.style.display = 'none';
 })
-
