@@ -1,8 +1,5 @@
 // Script meant to build all eight icons in two rows of four
 
-
-
-
 for (let n = 0; n < 8; n++) {
   const iconName = 'icon' + n
   let iconRow = document.getElementById("first-icon-row-container")
@@ -12,7 +9,7 @@ for (let n = 0; n < 8; n++) {
     iconRow = document.getElementById("second-icon-row-container")
   }
   
-  let htmlToInsert = `<form class="btnForm" id=${iconName}>
+  let htmlToInsert = `<form class="btnForm" id=${iconName} action="">
                         <button class="btn" id="${iconName}-btn" type="submit">
                             <img class="btn-image" src="./Icons/gmail.ico" alt="gmail icon">
                             <span class="sr-only">Link to favorite site</span>
