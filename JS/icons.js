@@ -5,7 +5,6 @@ for (let n = 0; n < 8; n++) {
   let iconRow = document.getElementById("first-icon-row-container")
   
   if (n > 3) {
-    console.log("first icon row is full!")
     iconRow = document.getElementById("second-icon-row-container")
   }
   
