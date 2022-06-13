@@ -9,7 +9,7 @@ for (let n = 0; n < 8; n++) {
   
   if (n > 3) {
     console.log("first icon row is full!")
-    iconRow = "second-icon-row"
+    iconRow = document.getElementById("second-icon-row-container")
   }
   
   let htmlToInsert = `<form class="btnForm" id=${iconName}>
